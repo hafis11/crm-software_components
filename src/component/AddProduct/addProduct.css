@@ -1,0 +1,45 @@
+
+
+.condainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.headbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2vh;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw;
+}
+.filebox{
+    width: 12vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 3em;
+}
+.addprotext{
+    font-size: 2vw;
+    font-weight: bold;
+}
+.addprotext~h6,.formtext{
+    font-size: 1.4vw;
+    color: #868686;
+}
+.formcondent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.inputbar{
+    width: 40vw;
+}
