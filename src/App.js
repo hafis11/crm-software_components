@@ -8,7 +8,7 @@ function App(){
   return (
     <div className="App">
       <div className="productlist">
-        <ProductCard productName="Driller" productPrice="100"/>
+        <ProductCard productName="Driller" productDescription="@product Description" productPrice="100"/>
     </div>
     <Addproduct></Addproduct>
     </div>
