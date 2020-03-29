@@ -1,0 +1,40 @@
+.its-container{
+    height: 6vw;
+    border-radius: .7vw;
+}
+.its-time{
+    height: 2vw;
+    width: 10vw;
+    background-color: rgb(17, 0, 255);
+    border-radius: 2vw;
+}
+small{
+    font-size: .7vw;
+}
+h3{
+    font-size: 1.5vw;
+    white-space: nowrap
+}
+
+.its-name{
+    white-space: nowrap;
+    font-size: .6vw;
+    color: black;
+}
+.its-view{
+    font-size: .7vw;
+    white-space: nowrap;
+}
+.its-circle{
+    height: 1.3vw;
+    width: 1.3vw;
+    border-radius: 50%;
+    background-color: blue;
+    font-size: .7vw;
+}
+.its-viewtext{
+    font-size: .6vw;
+}
+.its-viewdiv{
+    width: 4.3vw;
+}

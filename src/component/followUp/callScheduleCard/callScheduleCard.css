@@ -1,0 +1,32 @@
+
+
+
+
+.my-triangle{
+	border-top: 10vh solid transparent;
+	border-left: 13vh solid rgb(11, 67, 250);
+    border-bottom: 10vh solid transparent;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, .5));
+}
+.my-texthead{
+    font-size: 1.9vw;
+    white-space: nowrap;
+    color: #727070;
+}
+.my-text{
+    font-size: .9vw;
+}
+.my-name{
+    font-size: 1vw;
+    color: #727070;
+}
+.my-end, .my-menu{
+    font-size: .5vw;
+}
+.my-edit, .my-reassign , .my-delete{
+    font-size: 1vw;
+    white-space: nowrap
+}
+.my-menu{
+    margin-bottom: 8vw;
+}

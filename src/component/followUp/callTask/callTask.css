@@ -1,0 +1,21 @@
+
+.mycontainer{
+    background-color:#f7f7f7;
+}
+.mycircle{
+    height: 4vw;
+    width: 4vw;
+    font-size: 1.5vw; 
+    border-radius: 50%;
+    background-color: white;
+}
+.mysettings{
+    font-size: 1.2vw;
+}
+.mydate, .my-time{
+    font-size: 1.2vw;
+}
+.button{
+    font-size: 1vw;
+    font-weight: bold;
+}

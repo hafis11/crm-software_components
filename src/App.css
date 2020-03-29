@@ -1,12 +1,11 @@
 .App {
+  width: 100vw;
   height: 100vh;
-  width: "100%";
-  background-color: #e4e4e4;
 }
-.productlist{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-top: 100px;
+.my-view{
+  width: 33.3%;
+  overflow-y: scroll;
 }
-
+.my-view1{
+  width: 33.3%;
+}
