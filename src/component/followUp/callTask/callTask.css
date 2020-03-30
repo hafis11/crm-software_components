@@ -19,3 +19,9 @@
     font-size: 1vw;
     font-weight: bold;
 }
+.mydateInput{
+    width: 11vw;
+}
+.mytimeInput{
+    width: 6vw;
+}
