@@ -1,0 +1,52 @@
+
+.log-main{
+    height: 100vh;
+    width: 100vw;
+}
+.log-condainer{
+    height: 80vh;
+    width: 93vw;
+    border-radius: 4px;
+    box-shadow: 5px 10px 60px rgb(197, 197, 197);
+}
+
+.log-secondhalf{
+    width: 50vw;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.logo{
+    width: 20vw;
+    height: 40vh;
+}
+.log-input{
+    height:6vh;
+    border: none;
+    border-radius: 4px;
+    font-size: 2.5vh;
+    outline: none;
+}
+::placeholder{
+    color: white;
+}
+.log-button{
+    height: 6vh;
+    width: 9vw;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 3vh;
+}
+.log-buttons{
+    height: 4.5vh;
+    width: 9vw;
+    border-radius: 5px;
+    background-color: #4461ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    color: white;
+    font-size: 2.5vh;
+    box-shadow: 0px 2px 3px grey;
+}
