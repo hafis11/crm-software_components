@@ -36,17 +36,41 @@
     background-color: transparent;
     border: 2px solid white;
     font-size: 3vh;
+    transition: background 1s;
 }
-.log-buttons{
-    height: 4.5vh;
-    width: 9vw;
-    border-radius: 5px;
+.log-button:hover {
+    background-image: radial-gradient(circle, transparent 1%, #fffee946 1%);
+    background-position: center;
+    background-size: 15000%;
+}
+.log-button:active {
+    transition: background 0s;
+    background-color: rgb(255, 255, 255);
+    background-size: 100%;
+}
+button {
+    border: none;
+    border-radius: 1vh;
+    padding: .6vh 1.5vw;
+    font-size: 25px;
+    cursor: pointer;
     background-color: #4461ef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: lighter;
-    color: white;
-    font-size: 2.5vh;
-    box-shadow: 0px 2px 3px grey;
+    color: #fff;
+    display: block;
 }
+.log-butt{
+    font-size: 2vh;
+    transition: background 1s;
+    outline: none !important;
+}
+.log-butt:hover {
+    background-image: radial-gradient(circle, transparent 1%, #2d3193 1%);
+    background-position: center;
+    background-size: 15000%;
+}
+.log-butt:active {
+    transition: background 0s;
+    background-color: rgb(255, 255, 255);
+    background-size: 100%;
+}
+

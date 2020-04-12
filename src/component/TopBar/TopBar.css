@@ -1,0 +1,22 @@
+
+
+.navbar{
+    height: 11vh;
+    background-color: white;
+}
+.form-control{
+    height: 6vh;
+    width: 6vh;
+    font-size: 1.1vw;
+}
+button{
+    width: 6vh;
+}
+.img-profile{
+    height: 5vh;
+}
+.name-profile{
+    font-size: 1vw;
+    font-weight: lighter;
+    color: rgb(124, 124, 124);  
+}

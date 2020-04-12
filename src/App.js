@@ -1,22 +1,55 @@
 import React from 'react';
-import './App.css';
-// import ProductCard from './component/productcard/productCard';
-// import Addproduct from './component/AddProduct/addProduct';
-// import SideMenu from './component/leadAdder/sideMenu'
-// import CallcheduleCard from './component/followUp/callScheduleCard/callScheduleCard'
-// import EmailSchedule from './component/followUp/emailScheduleCard/emailScheduleCard'
-// import CallTask from './component/followUp/callTask/callTask'
-// import EmailTask from './component/followUp/emailTask/emailTask'
-// import CallHistory from './component/followUp/callHistory/callHistory'
-// import EmailHistory from './component/followUp/emailHistory/emailHistory'
-import Login from './component/logIn/logIn'
+import './App.css'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import DashBoard from './Screen/DashBoard/dashBoard'
+import Lead from './Screen/lead&Invoice/Lead'
+import Product from './Screen/Product/Product'
 
-function App(){
-  return (
-    <div class="App d-flex flex-row">
-      <Login></Login>
-    </div>
-  );
+class App extends React.Component{
+
+    render(){
+        return(
+          <Router>
+          <div class="wrapper d-flex">
+          <div class="sidebar bg-primary">
+              <div class="sidebar-header d-flex justify-content-center align-items-center">
+                <img src="companylogo.png"class="logo"/>
+              </div>
+      
+              <ul class="list-unstyled components d-flex flex-column align-items-center mt-5">
+                <li class="sidebar-opt mb-4">
+                    <Link class="sidebarlink nav-link" to="/">
+                        <i class="sidebar-option fa fa-tachometer" data-toggle="tooltip"data-placement="right" title="Dashboard"></i>
+                    </Link>
+                </li>
+                <li class="sidebar-opt mb-4">
+                    <Link class="sidebarlink nav-link" to="/lead">
+                        <i class="sidebar-option fa fa-leanpub"data-toggle="tooltip"data-placement="right" title="Lead"></i>
+                    </Link>
+                </li>
+                <li class="sidebar-opt mb-4">
+                    <Link class="sidebarlink nav-link" to="/product">
+                        <i class="sidebar-option fa fa-opencart"data-toggle="tooltip"data-placement="right" title="Product"></i>
+                    </Link>
+                </li>
+                <li class="sidebar-opt mb-4">
+                    <Link class="sidebarlink nav-link" to="/report">
+                        <i class="sidebar-option fa fa-file-text"data-toggle="tooltip"data-placement="right" title="Report"></i> 
+                    </Link>
+                </li>
+              </ul>
+          </div>  
+            <div>
+              <Switch>
+                <Route exact path="/" component={DashBoard} />
+                <Route path="/lead" component={Lead} />
+                <Route path="/product" component={Product} />
+                <Route path="/report" component={DashBoard} />
+              </Switch>
+            </div>
+          </div>
+        </Router>
+        )
+    }
 }
-
-export default App;
+export default App

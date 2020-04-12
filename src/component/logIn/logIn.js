@@ -43,9 +43,9 @@ class Login extends React.Component{
                         <img src="companylogo.png"class="logo"/>
                     </div>
                     <div class="d-flex flex-row mt-5">
-                        <div class="log-buttons mr-sm-4"type='button'onClick={this.adminlog}><snap>Admin</snap></div>
-                        <div class="log-buttons mr-sm-4"type='button'onClick={this.salelog}><snap>Sales</snap></div>
-                        <div class="log-buttons mr-sm-4"type='button'onClick={this.financelog}><snap>Finance</snap></div>
+                        <button class="log-butt mr-sm-4"type='button'onClick={this.adminlog}><snap>Admin</snap></button>
+                        <button class="log-butt mr-sm-4"type='button'onClick={this.salelog}><snap>Sales</snap></button>
+                        <button class="log-butt mr-sm-4"type='button'onClick={this.financelog}><snap>Account</snap></button>
                     </div>
                 </div>
                 {/* second half */}

@@ -6,7 +6,6 @@ import { faCog } from '@fortawesome/free-solid-svg-icons'
 class CallHistory extends React.Component{
      render(){  
          return(        
-
              <div class="mt-2">
              <div class="shadow overflow-hidden d-flex flex-row justify-content-lg-around its-container">
                 <div class="its-date  ml-sm-n5 mt-sm-n3">
