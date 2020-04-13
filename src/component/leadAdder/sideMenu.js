@@ -31,8 +31,8 @@ class SideMenu extends React.Component {
   render() {
     
     return (
-      <div>
-        <Button type="primary" onClick={this.showDrawer}>Open</Button>
+      <div class="pr-5">
+        <div class="bg-primary lead-button d-flex justify-content-center align-items-center rounded"type="button" onClick={this.showDrawer}><h4 class="m-3 text-light font-weight-bold mb-0">ADD</h4></div>
         <Drawer
           width={"60vw"}
           bodyStyle={{padding:0}}

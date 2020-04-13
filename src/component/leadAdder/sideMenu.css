@@ -4,6 +4,12 @@
 .iconsize{
     font-size: 3vh;
 }
+.lead-button{
+    width: 7vw;
+}
+.lead-button h4{
+    font-size: 1vw;
+}
 h1{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;

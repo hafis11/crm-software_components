@@ -1,0 +1,23 @@
+
+
+.head{
+    height: 15vh;
+    background-color: #f7f7f7;
+}
+.head-text{
+    font-size: 2vw;
+    font-weight: bold;
+}
+.add-button{
+    width: 6vw;
+    font-size: 1vw;
+}
+.lead-table{
+    height: 74vh;
+    background-color: white;
+}
+.table thead{
+    background-color:#f7f7f7;
+    color: grey;
+    font-size: .8vw;
+}

@@ -4,7 +4,7 @@ import './TopBar.css'
 class TopBar extends React.Component{
     render(){
         return(
-        <div class="navbar shadow navbar-static-top">
+        <div class="navbar shadow navbar-static-top mb-0">
             <form class="d-none d-inline-block mr-auto w-25 ml-5">
             <div class="input-group d-flex">
               <input type="text" class="form-control bg-light border-0" placeholder="Search for..." />
