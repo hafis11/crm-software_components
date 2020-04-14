@@ -43,9 +43,9 @@ class Login extends React.Component{
                         <img src="companylogo.png"class="logo"/>
                     </div>
                     <div class="d-flex flex-row mt-5">
-                        <button class="log-butt mr-sm-4"type='button'onClick={this.adminlog}><snap>Admin</snap></button>
-                        <button class="log-butt mr-sm-4"type='button'onClick={this.salelog}><snap>Sales</snap></button>
-                        <button class="log-butt mr-sm-4"type='button'onClick={this.financelog}><snap>Account</snap></button>
+                        <button class="log-butt mr-sm-4"type='button'onClick={this.adminlog}><span>Admin</span></button>
+                        <button class="log-butt mr-sm-4"type='button'onClick={this.salelog}><span>Sales</span></button>
+                        <button class="log-butt mr-sm-4"type='button'onClick={this.financelog}><span>Account</span></button>
                     </div>
                 </div>
                 {/* second half */}
@@ -53,7 +53,7 @@ class Login extends React.Component{
                     <h2 class="mb-sm-4 text-white" style={{fontSize:"5vh"}}>Welcome back</h2> 
                     <input type="text"class="log-input w-50 mb-4 p-3" style={{backgroundColor: this.state.inputcolor}}name="name" placeholder="Email address"/>
                     <input type="password"class="log-input w-50 mb-4 p-3"style={{backgroundColor: this.state.inputcolor}}name="name" placeholder="Password"/>
-                    <div class="log-button d-flex justify-content-center align-items-center text-white font-weight-bold"type='button'><snap>logIn</snap></div>
+                    <div class="log-button d-flex justify-content-center align-items-center text-white font-weight-bold"type='button'><span>logIn</span></div>
                 </div>
             </div>
         </div>

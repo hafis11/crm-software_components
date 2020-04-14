@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import Adder from "./adder"
 import PreviewAdder from "./previewAdder"
 import './estimate.css'
-let Rendercomps = [];
 export default class Estimate extends Component {
     constructor() {
         super()
@@ -61,25 +60,25 @@ export default class Estimate extends Component {
                 <div class="options d-flex justify-content-between mt-4">
                     {/* three buttons */}
                     <div class="section1 d-flex ">
-                        <div class="Create bg-light d-flex justify-content-center align-items-center" type="button"><snap>Create</snap></div>
-                        <div class="Draft bg-light d-flex justify-content-center align-items-center" type="button"><snap>Draft</snap></div>
-                        <div class="History bg-light d-flex justify-content-center align-items-center" type="button"><snap>History</snap></div>
+                        <div class="Create bg-light d-flex justify-content-center align-items-center" type="button"><span>Create</span></div>
+                        <div class="Draft bg-light d-flex justify-content-center align-items-center" type="button"><span>Draft</span></div>
+                        <div class="History bg-light d-flex justify-content-center align-items-center" type="button"><span>History</span></div>
                     </div>
                     {/* two colour buttons */}
                     <div class="section2 d-flex">
                         <div class="send bg-light d-flex justify-content-between align-items-center pl-1" type="button">
-                            <div class="circle rounded-circle d-flex justify-content-center align-items-center text-light"><i class="fa fa-paper-plane"></i></div>
-                            <snap class="sent-text pr-2">Send</snap>
+                            <div class="circle0 rounded-circle d-flex justify-content-center align-items-center text-light"><i class="fa fa-paper-plane"></i></div>
+                            <span class="sent-text pr-2">Send</span>
                         </div>
                         <div class="send1 bg-light d-flex justify-content-between align-items-center ml-3 pl-1" type="button">
                             <div class="circle1 rounded-circle d-flex justify-content-center align-items-center text-light"><i class="fa fa-envelope-open "></i></div>
-                            <snap class="sent-text1 pr-2">Draft</snap>
+                            <span class="sent-text1 pr-2">Draft</span>
                         </div>
                     </div>
                 </div>
                 {/* section2 closed */}
                 <div class="condent mt-2 d-flex flex-row">
-                    <div class="box col-md-6">
+                    <div class="box1 col-md-6">
                         {/* product tab */}
                         <div class="producttab h-auto mt-5">
                             <h4 class="ml-3 mb-0 m-2">Product Info</h4>
@@ -98,7 +97,7 @@ export default class Estimate extends Component {
                                 </tbody>
                             </table>
                             {/* Add product */}
-                            <div className="d-flex  p-2">
+                            <div class="d-flex  p-2">
                             <select id="products" defaultValue="Volvo"class="col-4  rounded-lg" defaultChecked="Volvo" name="product" onChange={event => this.setState({ selectedProduct: event.target.value })} >
                                 <option value="Volvo">Volvo</option>
                                 <option value="Saab">Saab</option>
@@ -109,12 +108,12 @@ export default class Estimate extends Component {
                             <div class="d-flex align-items-center text-success" style={{fontSize:"1.5vw"}} onClick={() => this.onClickHandler()}><i class="fa fa-plus-circle"/></div>
                         </div>
                             <div class="d-flex justify-content-end">
-                                <div class="total col-3 p-2 d-flex justify-content-center align-items-center rounded-lg mb-3 mr-3 font-weight-bold" type="button"><snap style={{ color: "gray" }}>TOTAL AMOUNT:300$</snap></div>
+                                <div class="total col-3 p-2 d-flex justify-content-center align-items-center rounded-lg mb-3 mr-3 font-weight-bold" type="button"><span style={{ color: "gray" }}>TOTAL AMOUNT:300$</span></div>
                             </div>
                         </div>
                         {/* product tab close */}
                     </div>
-                    <div class="box col-md-6">
+                    <div class="box1 col-md-6">
                         {/* contact */}
                         <div class="estimate-head m-n4">
                             <div class="text-condent d-flex flex-row justify-content-between p-5 mt-4">

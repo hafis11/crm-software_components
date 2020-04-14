@@ -42,131 +42,131 @@ class SideMenu extends React.Component {
           visible={this.state.visible}
         >
         <Tabs tabPosition={'left'} tabBarStyle={{marginTop:180}} activeKey={this.state.activeTab} onChange={this.changeTab}>
-        <TabPane  tab={<span><ContactsFilled className="iconsize"/></span>} key="1">
+        <TabPane  tab={<span><ContactsFilled class="iconsize"/></span>} key="1">
                 {/* lead adding input */}
-            <div className="formcondent">
+            <div class="formcondent">
                 <h1>Add Customer Info</h1>
-            <Form  layout="inline" className="inputform1">
-                <div className="formbox">
-                    <div className="form">
+            <Form  layout="inline" class="inputform1">
+                <div class="formbox">
+                    <div class="form">
                     <Form.Item label="FIRST NAME"/>
-                    <Input placeholder="First name" className="inputbar"/>
+                    <Input placeholder="First name" class="inputbar"/>
                     </div>
-                    <div className="form">
+                    <div class="form">
                     <Form.Item label="LAST NAME"/>
-                    <Input placeholder="Last name" className="inputbar"/>
+                    <Input placeholder="Last name" class="inputbar"/>
                     </div>
                 </div>
-                <div className="formbox">
-                    <div className="form">
+                <div class="formbox">
+                    <div class="form">
                     <Form.Item label="E MAIL"/>
-                    <Input placeholder="E mail" className="inputbar"/>
+                    <Input placeholder="E mail" class="inputbar"/>
                     </div>
-                    <div className="form">
+                    <div class="form">
                     <Form.Item label="PHONE NUMBER"/>
-                    <Input placeholder="Phone number" className="inputbar"/>
+                    <Input placeholder="Phone number" class="inputbar"/>
                     </div>
                 </div>
-                <div className="formbox">
-                    <div className="form">
+                <div class="formbox">
+                    <div class="form">
                     <Form.Item label="COMPANY"/>
-                    <Input placeholder="Company" className="inputbar"/>
+                    <Input placeholder="Company" class="inputbar"/>
                     </div>
-                    <div className="form">
+                    <div class="form">
                     <Form.Item label="WEBSITE"/>
-                    <Input placeholder="Website" className="inputbar"/>
+                    <Input placeholder="Website" class="inputbar"/>
                     </div>
                 </div>
             </Form>
-            <Button onClick={() => this.changeTab("2")} className="nextbutton">Next</Button>
+            <Button onClick={() => this.changeTab("2")} class="nextbutton">Next</Button>
             </div>
           </TabPane>
-          <TabPane tab={<span><InfoCircleFilled className="iconsize"/></span>} key="2">
-          <div className="formcondent">
+          <TabPane tab={<span><InfoCircleFilled class="iconsize"/></span>} key="2">
+          <div class="formcondent">
           <h1>Add Lead Info</h1>
-            <Form  className="inputform1">
+            <Form  class="inputform1">
                 <div>
-                    <Form.Item label="ASSIGNED TO" className="formlabel"/>
-                    <Select className="inputbar">
+                    <Form.Item label="ASSIGNED TO" class="formlabel"/>
+                    <Select class="inputbar">
                         <Select.Option value="choose">Choose</Select.Option>
                     </Select>
                 </div>
                 <div>
-                    <Form.Item label="ASSIGNED TO" className="formlabel"/>
-                    <Select className="inputbar">
+                    <Form.Item label="ASSIGNED TO" class="formlabel"/>
+                    <Select class="inputbar">
                         <Select.Option value="choose">Choose</Select.Option>
                     </Select>
                 </div>
                 <div>
-                <Form.Item label="CREATED ON" className="formlabel"/>
-                <DatePicker className="inputbar"/>
+                <Form.Item label="CREATED ON" class="formlabel"/>
+                <DatePicker class="inputbar"/>
                 </div>
             </Form>
-            <Button onClick={() => this.changeTab("3")} className="nextbutton">Next</Button>
+            <Button onClick={() => this.changeTab("3")} class="nextbutton">Next</Button>
             </div>
           </TabPane>
-          <TabPane tab={<span><EnvironmentFilled className="iconsize"/></span>} key="3">
-          <div className="formcondent">
+          <TabPane tab={<span><EnvironmentFilled class="iconsize"/></span>} key="3">
+          <div class="formcondent">
           <h1>Add Address</h1>
-            <Form  layout="inline" className="inputform1">
-                <div className="formbox">
-                    <div className="form">
+            <Form  layout="inline" class="inputform1">
+                <div class="formbox">
+                    <div class="form">
                     <Form.Item label="STREET"/>
-                    <Input placeholder="Street" className="inputbar"/>
+                    <Input placeholder="Street" class="inputbar"/>
                     </div>
-                    <div className="form">
+                    <div class="form">
                     <Form.Item label="CITY"/>
-                    <Input placeholder="City" className="inputbar"/>
+                    <Input placeholder="City" class="inputbar"/>
                     </div>
                 </div>
-                <div className="formbox">
-                    <div className="form">
+                <div class="formbox">
+                    <div class="form">
                     <Form.Item label="EMIRATE"/>
-                    <Input placeholder="Emirate" className="inputbar"/>
+                    <Input placeholder="Emirate" class="inputbar"/>
                     </div>
-                    <div className="form">
+                    <div class="form">
                     <Form.Item label="ZIPCODE"/>
-                    <Input placeholder="Zipcode" className="inputbar"/>
+                    <Input placeholder="Zipcode" class="inputbar"/>
                     </div>
                 </div>
             </Form>
-            <Button onClick={() => this.changeTab("4")} className="nextbutton">Next</Button>
+            <Button onClick={() => this.changeTab("4")} class="nextbutton">Next</Button>
             </div>
           </TabPane>
-          <TabPane tab={<span><BulbFilled className="iconsize"/></span>} key="4">
-          <div className="formcondent">
+          <TabPane tab={<span><BulbFilled class="iconsize"/></span>} key="4">
+          <div class="formcondent">
           <h1>Add Product</h1>
-            <Form  layout="inline" className="inputform1">
+            <Form  layout="inline" class="inputform1">
             <Select mode="tags" style={{ width: '24vw',marginTop:'16vh' }} placeholder="Tags Mode">
             <Option value="product1">Product1</Option>
             <Option value="Product2">Product2</Option>
             <Option value="Product3">Product3</Option>
             </Select>
             </Form>
-            <Button onClick={() => this.changeTab("5")} className="nextbutton">Next</Button>
+            <Button onClick={() => this.changeTab("5")} class="nextbutton">Next</Button>
             </div>
           </TabPane>
-          <TabPane tab={<span><PushpinFilled className="iconsize"/></span>} key="5">
-          <div className="formcondent">
+          <TabPane tab={<span><PushpinFilled class="iconsize"/></span>} key="5">
+          <div class="formcondent">
           <h1>Add Remark</h1>
-          <Form  className="inputform1">
-                <Input.TextArea className="inputbar1"autoSize={{ minRows: 7, maxRows: 15 }}placeholder="Place to write any remarks regarding leads..."/>
+          <Form  class="inputform1">
+                <Input.TextArea class="inputbar1"autoSize={{ minRows: 7, maxRows: 15 }}placeholder="Place to write any remarks regarding leads..."/>
             </Form>
-            <Button onClick={() => this.changeTab("6")} className="nextbutton">Next</Button>
+            <Button onClick={() => this.changeTab("6")} class="nextbutton">Next</Button>
           </div>
           </TabPane>
-          <TabPane tab={<span><CustomerServiceFilled className="iconsize"/></span>} key="6">
-          <div className="formcondent">
+          <TabPane tab={<span><CustomerServiceFilled class="iconsize"/></span>} key="6">
+          <div class="formcondent">
           <h1>Add Salesperson</h1>
-            <Form  className="inputform1">
+            <Form  class="inputform1">
                 <div>
-                    <Form.Item label="ASSIGNED TO" className="formlabel"/>
-                    <Select className="inputbar">
+                    <Form.Item label="ASSIGNED TO" class="formlabel"/>
+                    <Select class="inputbar">
                         <Select.Option value="choose">Choose</Select.Option>
                     </Select>
                 </div>
             </Form>
-            <Button onClick={this.onNextClick} className="nextbutton">Save</Button>
+            <Button onClick={this.onNextClick} class="nextbutton">Save</Button>
             </div>
           </TabPane>
         </Tabs>

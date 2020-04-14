@@ -18,10 +18,10 @@ class EmailHistory extends React.Component{
                 </div>
                 <div class="its-footer d-flex flex-column justify-content-lg-between">
                     <small class="its-name mr-1">Hafis Muhammed</small>
-                    <snap class="its-view d-flex flex-row align-items-center position-relative mb-1">
+                    <span class="its-view d-flex flex-row align-items-center position-relative mb-1">
                         <div class="shadow its-circle d-flex justify-content-center align-items-center text-light position-absolute"><FontAwesomeIcon icon={faCog}/></div>
                         <div class="its-viewdiv shadow bg-light d-flex justify-content-end rounded"><small class="its-viewtext">View More</small></div>
-                    </snap>
+                    </span>
                 </div>
              </div>
              </div>

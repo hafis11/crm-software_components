@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import DashBoard from './Screen/DashBoard/dashBoard'
 import Lead from './Screen/lead&Invoice/Lead'
 import Product from './Screen/Product/Product'
+import Report from './Screen/Report/report'
 
 class Home extends React.Component{
 
@@ -43,7 +44,7 @@ class Home extends React.Component{
                 <Route exact path="/" component={DashBoard} />
                 <Route path="/lead" component={Lead} />
                 <Route path="/product" component={Product} />
-                <Route path="/report" component={DashBoard} />
+                <Route path="/report" component={Report} />
               </Switch>
             </div>
           </div>

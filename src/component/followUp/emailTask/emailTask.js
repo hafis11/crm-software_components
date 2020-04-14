@@ -16,20 +16,20 @@ class EmailTask extends React.Component{
                     <div class="mysettings pt-1 pr-1 dropdown">
                         <FontAwesomeIcon icon={faCog} data-toggle="dropdown"/>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <snap class="dropdown-item">option1</snap>
-                            <snap class="dropdown-item">option2</snap>
-                            <snap class="dropdown-item">option3</snap>
+                            <span class="dropdown-item">option1</span>
+                            <span class="dropdown-item">option2</span>
+                            <span class="dropdown-item">option3</span>
                         </div>
                     </div>
                 </div>
                 <div class="my-sec-row d-flex flex-row align-items-center justify-content-around pb-sm-5">
                     <div class="my-date d-flex flex-column align-items-center">
                         <input class="mydateInput" type="date"/>
-                        <snap>Date</snap>
+                        <span>Date</span>
                     </div>
                     <div class="my-time d-flex flex-column align-items-center">
                         <input class="mytimeInput" type="time"/>
-                        <snap>Time</snap>
+                        <span>Time</span>
                     </div>
                 </div>
                 <div class="my-email d-flex justify-content-center">Select or Add new email</div>
@@ -41,7 +41,7 @@ class EmailTask extends React.Component{
                     </select>
                 </div>
                 <div class="my-button d-flex justify-content-center pb-sm-5">
-                    <Button className="button">Sent E-mail</Button>
+                    <Button class="button">Sent E-mail</Button>
                 </div>
             </div>
         )

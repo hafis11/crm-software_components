@@ -1,0 +1,26 @@
+
+.container{
+    height: 100vh;
+}
+h1{
+    font-size: 3vw;
+}
+h4{
+    font-size: 2vw;
+    color: gray;
+}
+.form-control{
+    width: 25vw;
+    max-height:25vh;
+}
+.button{
+    width: 6vw;
+}
+.button span{
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+.button-group{
+    width: 16vw;
+}
+

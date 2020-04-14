@@ -1,6 +1,5 @@
 import React from 'react'
-import '../productcard/productCard.css'
-import Inputform from '../AddProduct/inputForm'
+import './productCard.css'
 import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
@@ -43,33 +42,26 @@ class ProductCard extends React.Component{
     }
     render(){
         return(
-            <div className="box">
+            <div class="box">
                 {/* product status */}
-            <div className="block" style={{backgroundColor:this.state.color}}
+            <div class="block" style={{backgroundColor:this.state.color}}
                 onClick={this.statusChange}>
-                <text className="blocktext">{this.state.status}</text>
+                <span class="blocktext">{this.state.status}</span>
             </div>
             {/* product image */}
-                <div className="circle">
-                    <text className="pronm">PN</text>
+                <div class="circle">
+                    <span class="pronm">PN</span>
                 </div>
-                <div className="productname">{this.props.productName}</div>
-                <div className="productprice">{this.props.productPrice+"$"}</div>
-                <div className="productdec">{this.props.productDescription}</div>
-                <div className="optionbar">
+                <div class="productname">Product Name</div>
+                <div class="productprice">100</div>
+                <div class="productdec">details</div>
+                <div class="optionbar">
                     {/* product Delete button */}
-                    <Button variant="Light"><FontAwesomeIcon icon={faTrash}className="deloption"/>
-                    <text className="deloption">Delete</text></Button>
+                    <Button variant="Light"><FontAwesomeIcon icon={faTrash}class="deloption"/>
+                    <span class="deloption">Delete</span></Button>
                     {/* product Edit button */}
-                    <Button variant="Light" className="edioption" onClick={this.onClick}><FontAwesomeIcon icon={faEdit}/>
-                    <text className="edioption">Edit</text></Button>
-                    <Inputform
-                        show={this.state.modalShow}
-                        onHide={this.onHide}
-                        productPrice={this.props.productPrice}
-                        productName={this.props.productName}
-                        productDescription={this.props.productDescription}
-                    />
+                    <Button variant="Light" class="edioption" onClick={this.onClick}><FontAwesomeIcon icon={faEdit}/>
+                    <span class="edioption">Edit</span></Button>
                 </div>
             </div>  
         )

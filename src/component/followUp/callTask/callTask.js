@@ -16,24 +16,24 @@ class CallTask extends React.Component{
                     <div class="mysettings pt-1 pr-1 dropdown">
                         <FontAwesomeIcon icon={faCog} data-toggle="dropdown"/>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <snap class="dropdown-item">option1</snap>
-                            <snap class="dropdown-item">option2</snap>
-                            <snap class="dropdown-item">option3</snap>
+                            <span class="dropdown-item">option1</span>
+                            <span class="dropdown-item">option2</span>
+                            <span class="dropdown-item">option3</span>
                         </div>
                     </div>
                 </div>
                 <div class="mysec-row d-flex flex-row align-items-center justify-content-around pb-sm-5">
                     <div class="mydate d-flex flex-column align-items-center">
                         <input class="mydateInput" type="date"/>
-                        <snap>Date</snap>
+                        <span>Date</span>
                     </div>
                     <div class="mytime d-flex flex-column align-items-center">
                     <input class="mytimeInput" type="time"/>
-                        <snap>Time</snap>
+                        <span>Time</span>
                     </div>
                 </div>
                 <div class="mybutton d-flex justify-content-center pb-sm-5">
-                    <Button className="button">Schedule a Call</Button>
+                    <Button class="button">Schedule a Call</Button>
                 </div>
             </div>
         )

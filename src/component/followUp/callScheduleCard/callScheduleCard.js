@@ -9,8 +9,8 @@ class CallScheduleCard extends React.Component{
         <div class="my-condainer shadow rounded mt-1 d-flex flex-row align-items-center justify-content-between">
             <div class="my-triangle d-flex position-relative align-items-center justify-content-center">
                 <div class="my-textgroup position-absolute d-flex flex-column ml-sm-n5 text-light">
-                    <snap class="my-text font-weight-bold">12:00PM</snap>
-                    <snap class="my-text">Tue,Mar</snap>
+                    <span class="my-text font-weight-bold">12:00PM</span>
+                    <span class="my-text">Tue,Mar</span>
                 </div>
             </div>
             <div class="my-body d-flex flex-column align-items-center">
@@ -26,9 +26,9 @@ class CallScheduleCard extends React.Component{
             <div class="my-menu text-primary d-flex justify-content-end mr-sm-1 mt-sm-1 dropdown">
                         <FontAwesomeIcon icon={faCaretSquareDown} data-toggle="dropdown"/>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <snap class="dropdown-item">option1</snap>
-                            <snap class="dropdown-item">option2</snap>
-                            <snap class="dropdown-item">option3</snap>
+                            <span class="dropdown-item">option1</span>
+                            <span class="dropdown-item">option2</span>
+                            <span class="dropdown-item">option3</span>
                         </div>
                     </div>
                 <small class="my-end ">Added 4 days ago</small>
