@@ -7,7 +7,6 @@ class Report extends React.Component{
         return(
             <div style={{height:'100vh',width:'94vw'}}>
                 <TopBar></TopBar>
-
             </div>
         )
     }

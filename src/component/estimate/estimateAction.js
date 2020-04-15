@@ -55,7 +55,7 @@ export default class Estimate extends Component {
     }
     render() {
         return (
-            <div class="condent-body h-auto d-flex flex-column align-items-center">
+            <div class="condent-body h-auto d-flex flex-column align-items-center mt-4">
                 {/* section2 */}
                 <div class="options d-flex justify-content-between mt-4">
                     {/* three buttons */}
