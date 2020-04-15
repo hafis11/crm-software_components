@@ -4,7 +4,7 @@ import './newLead.css'
 export default class NewLead extends React.Component{
     render(){
         return(
-            <div class="newlead-condainer mt-3 d-flex flex-column justify-content-around ">
+            <div class="newlead-condainer mt-2 d-flex flex-column justify-content-around ">
                 {/* section1 */}
                 <div class="d-flex flex-row justify-content-around">
                 <div class="newload-box pl-0 pr-0 col-3 rounded shadow">
