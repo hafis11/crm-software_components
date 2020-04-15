@@ -119,7 +119,7 @@ export default class NewLead extends React.Component{
                              <snap class="lead-address-head font-weight-bold">Salesperson</snap>
                          </div>
                          <div>
-                         <img class="lead-profile rounded-circle ml-2" src="https://p16.muscdn.com/img/musically-maliva-obj/1637841601569797~c5_1080x1080.jpeg"></img>
+                         <img class="lead-profile rounded-circle ml-2" src="https://metro.co.uk/wp-content/uploads/2019/04/SEI_63947760.jpg?quality=90&strip=all"></img>
                          </div>
                             <div >
                             <select class="lead-selecter">
