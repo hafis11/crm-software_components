@@ -1,13 +1,13 @@
 
 .mycontainer{
-    background-color:#f7f7f7;
+    background-color:#ffffff;
 }
 .mycircle{
     height: 4vw;
     width: 4vw;
     font-size: 1.5vw; 
     border-radius: 50%;
-    background-color: white;
+    background-color: #f7f7f7;
 }
 .mysettings{
     font-size: 1.2vw;
@@ -15,9 +15,9 @@
 .mydate, .my-time{
     font-size: 1.2vw;
 }
-.button{
-    font-size: 1vw;
-    font-weight: bold;
+.button1{
+    width: 8vw;
+    font-size: .8vw;
 }
 .mydateInput{
     width: 11vw;

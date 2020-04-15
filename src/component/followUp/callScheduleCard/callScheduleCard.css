@@ -1,7 +1,10 @@
 
-
-
-
+.my-condainer{
+    background-color: white;
+}
+.my-condainer:hover{
+    background-color: rgb(241, 241, 241);
+}
 .my-triangle{
 	border-top: 10vh solid transparent;
 	border-left: 13vh solid rgb(11, 67, 250);
@@ -30,4 +33,10 @@
 .my-menu{
     margin-bottom: 8vw;
     font-size: .9vw;
+}
+.img-size{
+    width: 1vw;
+}
+.my-textgroup{
+    right: 2vw;
 }

@@ -15,6 +15,7 @@ class TopBar extends React.Component{
               </div>
             </div>
           </form>
+          
           <div class="nav-item dropdown no-arrow">
             <div class="nav-link d-flex align-items-center dropdown-toggle mr-3" id="dropdownMenuButton" data-toggle="dropdown">
                 <span class="name-profile">Hafis</span>

@@ -2,6 +2,13 @@
     height: 6vw;
     border-radius: .7vw;
 }
+.condent-box{
+    background-color: white;
+    border-radius: 10px;
+}
+.condent-box:hover{
+    background-color: rgb(241, 241, 241);
+}
 .its-time{
     height: 2vw;
     width: 10vw;
@@ -12,7 +19,7 @@ small{
     font-size: .7vw;
 }
 h3{
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     white-space: nowrap
 }
 

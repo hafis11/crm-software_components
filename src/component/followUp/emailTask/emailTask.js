@@ -1,24 +1,21 @@
 import React from 'react'
-import '../emailTask/emailTask.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCog, faEnvelope} from '@fortawesome/free-solid-svg-icons'
-import { Button } from 'react-bootstrap'
+import './emailTask.css'
 
 class EmailTask extends React.Component{
     render(){
         return(
-            <div class="my-container shadow  d-flex flex-column rounded justify-content-around">
+            <div class="my-container shadow-sm  d-flex flex-column rounded justify-content-around">
                 <div class="my-fi-row d-flex flex-row justify-content-between">
                     <div class="overflow-hidden">
-                    <div class="my-circle d-flex justify-content-center align-items-center text-primary ml-sm-n2 mt-sm-n2">
-                        <FontAwesomeIcon icon={faEnvelope}/>
+                    <div class="my-circle d-flex justify-content-center align-items-center text-primary ml-sm-n3 mt-sm-n3">
+                        <span class="fa fa-envelope"/>
                     </div></div>
-                    <div class="mysettings pt-1 pr-1 dropdown">
-                        <FontAwesomeIcon icon={faCog} data-toggle="dropdown"/>
+                    <div class="mysettings pt-1 pr-2 dropdown">
+                        <span class="fa fa-cog text-primary" data-toggle="dropdown"/>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <span class="dropdown-item">option1</span>
-                            <span class="dropdown-item">option2</span>
-                            <span class="dropdown-item">option3</span>
+                            <span type="button" class="dropdown-item">option1</span>
+                            <span type="button" class="dropdown-item">option2</span>
+                            <span type="button" class="dropdown-item">option3</span>
                         </div>
                     </div>
                 </div>
@@ -41,7 +38,7 @@ class EmailTask extends React.Component{
                     </select>
                 </div>
                 <div class="my-button d-flex justify-content-center pb-sm-5">
-                    <Button class="button">Sent E-mail</Button>
+                <div type="button" class="button1 bg-primary p-2 d-flex justify-content-center align-items-center rounded"><span>Schedule a Email</span></div>
                 </div>
             </div>
         )

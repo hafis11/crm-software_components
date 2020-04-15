@@ -18,7 +18,7 @@ export default class ProductList extends React.Component{
                 details:'new'
                 },
             ],
-        }
+        }           
     }
     componentDidMount(){
         this.setState(prevState => ({

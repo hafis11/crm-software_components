@@ -1,0 +1,16 @@
+
+.condainer{
+    width: 94vw;
+    height: 89.5vh;
+    background-color: #f7f7f7;
+}
+.section{
+    overflow-y: scroll;
+}
+.sticky-bar{
+    height: 10vh;
+    top: 0;
+    background-color: #ffffff;
+    z-index:100;
+    font-size: 1.5vw;
+}

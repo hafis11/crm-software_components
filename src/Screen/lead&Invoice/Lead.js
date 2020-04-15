@@ -4,6 +4,11 @@ import TopBar from '../../component/TopBar/TopBar'
 import LeadAdder from '../../component/leadAdder/sideMenu'
 
 class Lead extends React.Component {
+
+    onClickHandler=()=>{
+        console.log('clicked');
+    }
+
     render() {
         return (
             <div class="bg-light" style={{ height: '100vh', width: '94vw' }}>
@@ -21,6 +26,7 @@ class Lead extends React.Component {
                                 <th scope="col">TAGS</th>
                                 <th scope="col">CREATED DATE</th>
                                 <th scope="col">STATUS</th>
+                                <th scope="col"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,13 +36,7 @@ class Lead extends React.Component {
                                 <td>Crane</td>
                                 <td>23 May 2019</td>
                                 <td>NewLead</td>
-                            </tr>
-                            <tr>
-                                <td>Samantha lvy</td>
-                                <td>Ras-al-khaimah</td>
-                                <td>Driller</td>
-                                <td>23 May 2020</td>
-                                <td>Estimate</td>
+                                <td class="fa fa-eye text-success"onClick = {()=>this.onClickHandler()}></td>
                             </tr>
                         </tbody>
                     </table>
