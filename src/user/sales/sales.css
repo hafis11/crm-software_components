@@ -1,0 +1,47 @@
+
+.wrapper{
+    width: 100vw;
+  }
+  
+  .sidebar{
+    height: 100vh;
+    width: 6vw;
+  }
+  .sidebarlink{
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .sidebar-option{
+    font-size: 2.3vh;
+    color: #bcdcff;
+  }
+  .sidebar-option:active{
+    color: white;
+  }
+  .sidebar-option:hover{
+    color: white;
+  }
+  .logo{
+    width: 4vw;
+    height: 3vw;
+  }
+  .sidebar-header{
+    height: 70px;
+    border-bottom: 1px solid #0076f5;
+  }
+  .sidebar-opt:hover{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-right:5px solid #0563c7;
+    color: white;
+  }
+  .stepper-bar{
+    color: white;
+    padding: 12px;
+    width: 18vw;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+  }

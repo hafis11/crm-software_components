@@ -1,8 +1,5 @@
 import React from 'react'
-import './productCard.css'
-import { Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons'
+import './productList.css'
 
 export default class ProductList extends React.Component{
     constructor(props){
@@ -70,11 +67,11 @@ export default class ProductList extends React.Component{
                 <div class="productdec">details</div>
                 <div class="optionbar">
                     {/* product Delete button */}
-                    <Button variant="Light"><FontAwesomeIcon icon={faTrash}class="deloption"/>
-                    <span class="deloption">Delete</span></Button>
+                    <div type="button" ><snap class="fa fa-trash deloption"/>
+                    <span class="deloption">Delete</span></div>
                     {/* product Edit button */}
-                    <Button variant="Light" class="edioption" onClick={this.onClick}><FontAwesomeIcon icon={faEdit}/>
-                    <span class="edioption">Edit</span></Button>
+                    <div type="button" class="edioption" onClick={this.onClick}><snap class="fa fa-pencil-square"/>
+                    <span class="edioption">Edit</span></div>
                 </div>
             </div> 
               );

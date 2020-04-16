@@ -1,10 +1,10 @@
 import React from 'react';
-import './home.css'
+import './sales.css'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import DashBoard from './Screen/DashBoard/dashBoard'
-import Lead from './Screen/lead&Invoice/Lead'
-import Product from './Screen/Product/Product'
-import Report from './Screen/Report/report'
+import SalesDashboard from '../../Screen/DashBoard/salesDashboard/salesDashboard'
+import Lead from '../../Screen/lead&Invoice/Lead'
+import Product from '../../Screen/Product/Product'
+import Report from '../../Screen/Report/report'
 
 class Home extends React.Component{
 
@@ -41,7 +41,7 @@ class Home extends React.Component{
         </div>  
           <div>
             <Switch>
-              <Route exact path="/" component={DashBoard} />
+              <Route exact path="/" component={SalesDashboard} />
               <Route path="/lead" component={Lead}/>
               <Route path="/product" component={Product} />
               <Route path="/report" component={Report} />

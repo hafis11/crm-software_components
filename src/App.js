@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css'
-import Home from './home'
+// import Admin from './user/admin/admin'
+import Sales from './user/sales/sales'
 
 class App extends React.Component{
 
     render(){
         return(
-          <Home></Home>
+          <Sales></Sales>
         )
     }
 }

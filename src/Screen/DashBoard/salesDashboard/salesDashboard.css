@@ -1,0 +1,63 @@
+.dashboard-tab{
+    height: 89vh;
+    overflow-y: scroll;
+}
+.condent1{
+    background-color: white;
+}
+.condent1:hover{
+    background-color:#f6f6f6 ;
+}
+.overall-box{
+    height: 14vh;
+}
+
+.activity-tab{
+    height: 70vh;
+    font-size: 1.5vw;
+}
+.total-pro-box{
+    height: 30vh;
+    width: 22.5vw;
+}
+.image-size{
+    width:3vw;
+}
+.total-box{
+    height: 100%;
+    width: 22.5vw;
+}
+.source-box{
+    height: 19vh;
+}
+.box-text:first-child {
+    font-size: 1.2vw;
+}
+.box-text:last-child{
+    font-size: 2.3vw;
+    font-weight: bold;
+    color: #007bff;
+}
+.total-text:first-child{
+    font-weight: bold;
+    font-size: 2vw;
+}
+.total-text:last-child{
+    font-size: 1.2vw;
+}
+.activity-head{
+    border-bottom: 1px solid gray;
+}
+.source-head-text{
+    font-size: 1.5vw;
+}
+.source-data:last-child{
+    font-size: 1.5vw;
+}
+.source-data-box{
+    border-right: 1px solid gray;
+}
+.input-bar{
+    width: 8vw;
+    font-size: 1vw;
+}
