@@ -16,8 +16,35 @@ button{
 .img-profile{
     height: 5vh;
 }
+.icon-circle{
+    width: 3vw;
+    height: 6vh;
+}
 .name-profile{
     font-size: 1vw;
     font-weight: lighter;
     color: rgb(124, 124, 124);  
+}
+.dropdown-head-text{
+    font-size: 3vh;
+    font-weight: bold;
+    height: 7vh;
+}
+.nav-item{
+    color: white;
+}
+.notif--icon{
+    color: gray;
+}
+.dropdown-list{
+    width: 25vw;
+}
+.items{
+    height: 10vh;
+}
+.small{
+    font-size: 1.6vh;
+}
+.alert-head{
+    font-size: 2vh;
 }

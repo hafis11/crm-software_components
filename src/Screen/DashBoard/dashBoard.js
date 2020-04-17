@@ -41,7 +41,7 @@ class DashBoard extends React.Component{
                                 <span class="box-text">22</span>
                             </div>
                             <div>
-                                <img src="launch.png" class="image-size"/>
+                                <img src={require('../../images/launch.png')} class="image-size"/>
                             </div>
                         </div>
                         <div class="condent1 col-3 ml-2 rounded d-flex flex-row justify-content-between align-items-center shadow">
@@ -50,7 +50,7 @@ class DashBoard extends React.Component{
                                 <span class="box-text">10</span>
                             </div>
                             <div>
-                                <img src="follow.png" class="image-size"/>
+                                <img src="./follow.png" class="image-size"/>
                             </div>
                         </div>
                         <div class="condent1 col-3 ml-2 rounded d-flex flex-row justify-content-between align-items-center shadow">

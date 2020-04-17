@@ -1,3 +1,6 @@
 .product-condent{
     height: 72vh;
 }
+.product-condent{
+    overflow-y: scroll;
+}

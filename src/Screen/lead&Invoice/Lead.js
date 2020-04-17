@@ -1,11 +1,12 @@
 import React from 'react'
 import './lead.css';
-import TopBar from '../../component/TopBar/TopBar';
 import LeadAdder from '../../component/leadAdder/sideMenu';
 import Estimate from "../../component/estimate/estimateAction"
 import FollowUp from '../../component/followUp/followUp'
 import NewLead from '../../component/newLead/newLead'
 import { BrowserRouter, Route, Switch, Link ,NavLink,Router } from "react-router-dom";
+
+const axios = require("axios").default;
 
 export default class Lead extends React.Component {
     constructor() {
@@ -16,20 +17,41 @@ export default class Lead extends React.Component {
         }
         this.showLeads = this.showLeads.bind(this);
     }
+
     componentDidMount() {
-        this.setState({
-            list: allleads.map(leads => <tbody>
-                <tr>
-                    <td>{leads.name}</td>
-                    <td>{leads.emirate}</td>
-                    <td>{leads.product}</td>
-                    <td>{leads.created_date}</td>
-                    <td>NewLead</td>
-                    <td><Link className="fa fa-eye text-success" onClick={() => this.onClickHandler()} ></Link></td>
-                </tr>
-            </tbody>)
+        axios.get(`http://localhost:3001/sales/${this.props.location.state.idsales}/leads`,{
+            withCredentials:true
+        }).then(response=>{
+            this.setState({
+                list: response.data.map(leads => <tbody>
+                    <tr>
+                        <td>{`${leads.fname} ${leads.lname}`}</td>
+                        <td>{leads.emirate}</td>
+                        <td></td>
+                        <td></td>
+                        <td>{`${leads.status}`}</td>
+                        <td><Link className="fa fa-eye text-success" onClick={() => this.onClickHandler()} ></Link></td>
+                    </tr>
+                </tbody>)
+            });
+        }).catch(response=>{
+            console.log(response);
         })
+
+        // this.setState({
+        //     list: allleads.map(leads => <tbody>
+        //         <tr>
+        //             <td>{leads.name}</td>
+        //             <td>{leads.emirate}</td>
+        //             <td>{leads.product}</td>
+        //             <td>{leads.created_date}</td>
+        //             <td>NewLead</td>
+        //             <td><Link className="fa fa-eye text-success" onClick={() => this.onClickHandler()} ></Link></td>
+        //         </tr>
+        //     </tbody>)
+        // });
     }
+
     onClickHandler = () => {
         this.setState({showLeadsAndInvoice:false,match:this.props.match});
     }
@@ -37,8 +59,7 @@ export default class Lead extends React.Component {
     showLeads() {
         if (this.state.showLeadsAndInvoice === true) {
             return (
-                <div class="bg-light" style={{ height: '100vh', width: '94vw' }}>
-                    <TopBar></TopBar>
+                <div class="bg-light" style={{width: '94vw' }}>
                     <div class="head d-flex flex-row justify-content-between align-items-center">
                         <div class="head-text pl-5">Lead & Invoice</div>
                         <LeadAdder></LeadAdder>

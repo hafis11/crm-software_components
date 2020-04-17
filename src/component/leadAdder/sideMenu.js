@@ -50,7 +50,7 @@ class SideMenu extends React.Component {
                 <div className="formbox">
                     <div className="form">
                     <Form.Item label="FIRST NAME"/>
-                    <Input placeholder="First name" className="inputbar"/>
+                    <Input placeholder="First name" className="inputbar" onChange={(e)=>{console.log(e.target.value)}} required/>
                     </div>
                     <div className="form">
                     <Form.Item label="LAST NAME"/>
