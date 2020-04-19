@@ -1,30 +1,6 @@
 import React from 'react'
 import './salesDashboard.css'
-import { Doughnut} from 'react-chartjs-2';
 
-const state = {
-    labels: ['New Lead', 'Follow_Up', 'Estimate',
-             'Invoice', 'Lost'],
-    datasets: [
-      {
-        backgroundColor: [
-          '#fe6383',
-          '#ff9f40',
-          '#ffcc56',
-          '#4ac0c0',
-          '#36a2eb'
-        ],
-        hoverBackgroundColor: [
-        '#fe0134',
-        '#ff8000',
-        '#ffb300',
-        '#3caaaa',
-        '#1794e8'
-        ],
-        data: [65, 59, 80, 81, 56]
-      }
-    ]
-  }
 
 class SalesDashboard extends React.Component{
     render(){

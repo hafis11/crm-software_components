@@ -1,6 +1,6 @@
 import React from 'react'
 import './dashboard.css'
-import TopBar from '../../component/TopBar/TopBar'
+import TopBar from '../../../component/TopBar/TopBar'
 import { Doughnut} from 'react-chartjs-2';
 
 const state = {
@@ -32,16 +32,16 @@ class DashBoard extends React.Component{
         return(
             <div class="bg-light" style={{height:'100vh',width:'94vw'}}>
                 <TopBar></TopBar>
-                <div class="dashboard-tab container-fluid">
+                <div class="dashboard-tab1 container-fluid">
                     {/* section1 */}
-                    <div class="overall-box d-flex flex-row mt-4 justify-content-center">
+                    <div class="overall-box d-flex flex-row mt-2 justify-content-center">
                         <div class="condent1 col-3 ml-2 rounded d-flex flex-row justify-content-between align-items-center shadow">
                             <div class="d-flex flex-column">
                                 <span class="box-text">New Lead</span>
                                 <span class="box-text">22</span>
                             </div>
                             <div>
-                                <img src={require('../../images/launch.png')} class="image-size"/>
+                                <img src={require('../../../images/launch.png')} class="image-size"/>
                             </div>
                         </div>
                         <div class="condent1 col-3 ml-2 rounded d-flex flex-row justify-content-between align-items-center shadow">
@@ -50,7 +50,7 @@ class DashBoard extends React.Component{
                                 <span class="box-text">10</span>
                             </div>
                             <div>
-                                <img src="./follow.png" class="image-size"/>
+                                <img src={require('../../../images/follow.png')} class="image-size"/>
                             </div>
                         </div>
                         <div class="condent1 col-3 ml-2 rounded d-flex flex-row justify-content-between align-items-center shadow">
@@ -59,7 +59,7 @@ class DashBoard extends React.Component{
                                 <span class="box-text">7</span>
                             </div>
                             <div>
-                                <img src="estimate.png" class="image-size"/>
+                                <img src={require('../../../images/estimate.png')} class="image-size"/>
                             </div>
                         </div>
                         <div class="condent1 col-3 ml-2 rounded d-flex flex-row justify-content-between align-items-center shadow">
@@ -68,12 +68,12 @@ class DashBoard extends React.Component{
                                 <span class="box-text">4</span>
                             </div>
                             <div>
-                                <img src="bill.png" class="image-size"/>
+                                <img src={require('../../../images/bill.png')} class="image-size"/>
                             </div>
                         </div>
                     </div>
                     {/* section2 */}
-                    <div class="activity-tab d-flex flex-row mt-4 justify-content-center">
+                    <div class="activity-tab1 d-flex flex-row mt-2 justify-content-center">
                         <div class="col-3 ml-2 rounded d-flex flex-column align-items-center">
                             <div class="condent1 total-pro-box rounded d-flex flex-row justify-content-between align-items-center shadow">
                                 <div class="d-flex flex-column ml-5">
@@ -81,13 +81,13 @@ class DashBoard extends React.Component{
                                     <span class="box-text">$300</span>
                                 </div>
                                 <div class="mr-5">
-                                    <img src="bank.png" class="image-size"/>
+                                    <img src={require('../../../images/bank.png')} class="image-size"/>
                                 </div>
                             </div>
                             <div class="condent1 total-box mt-3 rounded d-flex flex-column justify-content-around shadow">
                                 <div class="d-flex flex-row justify-content-around align-items-center mt-2">
                                 <div>
-                                    <img src="handshake.png" class="image-size"/>
+                                    <img src={require('../../../images/handshake.png')} class="image-size"/>
                                 </div>
                                 <div class="d-flex flex-column">
                                     <span class="total-text">50</span>
@@ -99,7 +99,7 @@ class DashBoard extends React.Component{
                                 </div>
                                 <div class="d-flex flex-row justify-content-around align-items-center mb-2">
                                 <div>
-                                    <img src="package.png" class="image-size"/>
+                                    <img src={require('../../../images/package.png')} class="image-size"/>
                                 </div>
                                 <div class="d-flex flex-column">
                                     <span class="total-text">78</span>
@@ -130,7 +130,7 @@ class DashBoard extends React.Component{
                                 }}
                                 />  
                         </div>
-                        <div class="condent1 activity-tab col-4 ml-2 rounded shadow">
+                        <div class="condent1 col-4 ml-2 rounded shadow">
                             {/* border head */}
                             <div class="activity-head d-flex flex-row p-2">
                                 <div>
@@ -147,7 +147,7 @@ class DashBoard extends React.Component{
                     <div class="source-box d-flex flex-row mt-4 justify-content-center mt-4">
                         <div class="condent1 col-4  ml-2 rounded d-flex flex-column justify-content-center shadow">
                             <div class="d-flex flex-row justify-content-between mb-1 align-items-center">
-                                <img src="twitter.png" class="image-size"/>
+                                <img src={require('../../../images/twitter.png')} class="image-size"/>
                                 <span class="source-head-text font-weight-bold">Website</span>
                             </div>
                             <div>
@@ -166,7 +166,7 @@ class DashBoard extends React.Component{
                         </div>
                         <div class="condent1 col-4  ml-2 rounded d-flex flex-column justify-content-center shadow">
                             <div class="d-flex flex-row justify-content-between mb-1 align-items-center">
-                                <img src="conversation.png" class="image-size"/>
+                                <img src={require('../../../images/conversation.png')} class="image-size"/>
                                 <span class="source-head-text font-weight-bold">Contact</span>
                             </div>
                             <div>
@@ -185,7 +185,7 @@ class DashBoard extends React.Component{
                         </div>
                         <div class="condent1 col-4  ml-2 rounded d-flex flex-column justify-content-center shadow">
                             <div class="d-flex flex-row justify-content-between mb-1 align-items-center">
-                                <img src="businessman.png" class="image-size"/>
+                                <img src={require('../../../images/businessman.png')} class="image-size"/>
                                 <span class="source-head-text font-weight-bold">Other Source</span>
                             </div>
                             <div>

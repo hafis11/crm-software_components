@@ -1,7 +1,6 @@
-.dashboard-tab{
+/* .dashboard-tab1{
     height: 89vh;
-    overflow-y: scroll;
-}
+} */
 .condent1{
     background-color: white;
 }
@@ -10,9 +9,10 @@
 }
 .overall-box{
     height: 14vh;
+    width: 91vw;
 }
 
-.activity-tab{
+.activity-tab1{
     height: 47vh;
     font-size: 1.5vw;
 }

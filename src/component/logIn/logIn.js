@@ -3,10 +3,11 @@ import './logIn.css';
 import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap/dist/css/bootstrap.css';
-import cross from '../../images/cross.svg';
 import 'bootstrap/dist/js/bootstrap';
+import cross from '../../images/cross.svg';
 import {withRouter} from 'react-router-dom';
-import postData from '../../fetch';
+import {connect} from 'react-redux';
+import {loginUser,clearLoginError} from '../../redux/action';
 
 
 const axios = require("axios").default;
@@ -21,10 +22,10 @@ class Login extends React.Component {
             username: "",
             password: "",
             usertype: "admin",
-            error: null
         };
         this.handleUsername = this.handleUsername.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
+        this.handleModal = this.handleModal.bind(this);
         this.submitLogin = this.submitLogin.bind(this);
         this.showModal = this.showModal.bind(this);
     }
@@ -63,28 +64,23 @@ class Login extends React.Component {
         this.setState({ password: e.target.value });
     }
 
+    handleModal(){
+        this.props.dispatch(clearLoginError());
+    }
+
     showModal() {
         $("#myModal").modal({backdrop:"static",show:true});
-        // $("#myModal").modal("show");
     }
 
     submitLogin() {
-        axios.post("http://localhost:3001/login",
-            {
-                username: this.state.username,
-                password: this.state.password,
-                usertype: this.state.usertype
-            },{
-                withCredentials:true
-            }
-        ).then((response) => {
-            console.log(response);
-            sessionStorage.setItem("user",JSON.stringify(response.data));
-            this.props.history.push({pathname:`/${this.state.usertype}`,state:response.data});
-        }).catch((err) => {
-            console.log(err.response.data);
-            this.setState({ error: err.response.data.err });
-        })
+        //     this.props.history.push({pathname:`/${this.state.usertype}`,state:response.data});
+        this.props.dispatch(loginUser(this.state.username,this.state.password,this.state.usertype));
+    }
+
+    componentDidUpdate(){
+        if(this.props.isAuthenticated){
+            this.props.history.push({pathname:`/${this.props.user.usertype}`,state:this.props.user});
+        }
     }
 
     render() {
@@ -93,7 +89,7 @@ class Login extends React.Component {
                 <div className="log-condainer d-flex flex-row bg-white">
                     {/* ---------------------Modal window--------------------------------------   */}
                     <div className="modal" id="myModal" role="dialog">
-                        <div className="modal-dialog">
+                        <div className="modal-dialog modal-dailog-centered">
                             <div className="modal-content">
                                 <div className="modal-body d-flex flex-column justify-content-around align-items-center" style={{height:'45vh'}}>
                                         <img src={cross} class="cross-img"/>
@@ -101,15 +97,14 @@ class Login extends React.Component {
                                         <h6>Bad credentials.</h6>
                                         <h6 class="mt-n2">Please login again!</h6>
                                         </div>
-                                        <h6 class="text-black-50">{this.state.error}</h6>
-                                        <div type="button" className="btn btn-danger rounded-pill" style={{width:'7vw'}} data-dismiss="modal" onClick={()=>{this.setState({error:null})}} >Retry</div>
+                                        <div type="button" className="btn btn-danger rounded-pill" style={{width:'7vw'}} data-dismiss="modal" onClick={this.handleModal} >Ok</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     {/* ---------------------Modal window--------------------------------------*/}
                     {
-                        this.state.error !== null ? this.showModal() : <></>
+                        this.props.loginError? this.showModal() : <></>
                     }
                     {/* first half */}
                     <div className="d-flex flex-column justify-content-center align-items-center" style={{ width: "50vw" }}>
@@ -134,4 +129,14 @@ class Login extends React.Component {
         )
     }
 }
-export default withRouter(Login);
+
+function mapStateToProps(state) {
+    return {
+      isLogingIn: state.auth.isLogingIn,
+      isAuthenticated: state.auth.isAuthenticated,
+      user: state.auth.user,
+      loginError:state.auth.loginError
+    }
+  }
+
+export default connect(mapStateToProps)(withRouter(Login));

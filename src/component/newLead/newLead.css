@@ -1,6 +1,6 @@
 .newlead-condainer{
     width: 94vw;
-    height: 86vh;
+    height: 86.7vh;
     background-color: #f7f7f7;
 }
 .newload-box{
@@ -11,8 +11,8 @@
     background-color: rgb(251, 251, 251);
 }
 .glyphicon{
-    transform: rotate(45deg);
-    font-size: 3.4vw;
+    transform: rotate(135deg);
+    font-size: 4.5vw;
 }
 .name-tag{
     width: 23vw;
