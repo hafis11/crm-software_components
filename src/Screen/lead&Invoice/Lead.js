@@ -1,12 +1,11 @@
 import React from 'react'
 import './lead.css';
-
 import LeadAdder from '../../component/leadAdder/sideMenu';
 import Estimate from "../../component/estimate/estimateAction"
 import FollowUp from '../../component/followUp/followUp'
 import NewLead from '../../component/newLead/newLead'
+import TopBar from '../../component/TopBar/TopBar'
 
-import $ from 'jquery';
 import 'popper.js';
 import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -59,6 +58,7 @@ class Lead extends React.Component {
         if (this.state.showLeadsAndInvoice === true) {
             return (
                 <div class="bg-light" style={{ width: '94vw' }}>
+                    <TopBar></TopBar>
                     <div class="head d-flex flex-row justify-content-between align-items-center">
                         <div class="head-text pl-5">Lead & Invoice</div>
                         <LeadAdder></LeadAdder>

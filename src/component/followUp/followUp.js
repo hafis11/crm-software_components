@@ -11,7 +11,7 @@ import EnailHistory from './emailHistory/emailHistory'
 export default class FollowUp extends React.Component{
     render(){
         return(
-            <div class="condainer d-flex flex-row mt-4">
+            <div class="condainer d-flex flex-row mt-2">
                 <div class="section col-4"> 
                     <div class="sticky-bar position-sticky shadow d-flex justify-content-center align-items-center">
                         <span class="text-primary font-weight-bold">Activitys</span>

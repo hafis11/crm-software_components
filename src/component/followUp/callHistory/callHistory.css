@@ -10,15 +10,15 @@
     background-color: rgb(241, 241, 241);
 }
 .its-time{
-    height: 2vw;
+    height: 2.3vw;
     width: 10vw;
     background-color: rgb(17, 0, 255);
     border-radius: 2vw;
 }
-small{
+.its-time small{
     font-size: .7vw;
 }
-h3{
+.its-body h3{
     font-size: 1.3vw;
     white-space: nowrap
 }

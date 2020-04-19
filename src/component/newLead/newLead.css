@@ -81,3 +81,8 @@ textarea{
     color: black;
     border:2px solid #007bff;
 }
+.product-box{
+    height: 20vh;
+    width: 20vw;
+    overflow-y: scroll;
+}

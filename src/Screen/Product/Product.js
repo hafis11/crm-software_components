@@ -2,6 +2,7 @@ import React from 'react'
 import './Product.css'
 import AddProduct from '../../component/Product/addProduct'
 import ProductCard from '../../component/Product/productCard'
+import TopBar from '../../component/TopBar/TopBar'
 const axios = require("axios").default;
 
 class Product extends React.Component{
@@ -53,6 +54,7 @@ class Product extends React.Component{
     render(){
         return(
             <div style={{width:'94vw',backgroundColor:'#f7f7f7'}}>
+                <TopBar></TopBar>
                 <div class="head d-flex flex-row justify-content-between align-items-center">
                     <div class="head-text pl-5">Product List</div>
                     <AddProduct refresh={this.fetchProducts} />

@@ -15,9 +15,9 @@ class CallScheduleCard extends React.Component{
                 <div class="my-texthead font-weight-bold">Outbound Call</div>
                 <small class="my-name">Hafis Muhammed</small>
                 <div class="my-options d-flex flex-row pt-sm-4 text-primary">
-                    <div class="my-edit pr-lg-3"><img src="../plan.png" class="img-size"/>Edit</div>
-                    <div class="my-reassign"><img src="../call.png" class="img-size"/>Done</div>
-                    <div class="my-delete pl-lg-3"><img src="../delete.png" class="img-size"/>Delete</div>
+                    <div type="button" class="my-edit pr-lg-3"><img src={require('../../../images/plan.png')} class="img-size"/>Edit</div>
+                    <div type="button" class="my-reassign"><img src={require('../../../images/call.png')} class="img-size"/>Done</div>
+                    <div type="button" class="my-delete pl-lg-3"><img src={require('../../../images/delete.png')} class="img-size"/>Delete</div>
                 </div>
             </div>
             <div class="my-footer d-flex flex-column">

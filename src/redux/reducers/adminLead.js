@@ -9,13 +9,11 @@ import {
 
 export default (
     state = {
-        isFetchingSalesman: false,
-        isLogingOut: false,
-        fetchSalesmanError: false,
-        logoutError: false,
-        isAuthenticated: false,
-        salesmanList: null,
-        currentSalesman:null,
+        isFetchingSalesman: false, // Salesman Fetch Request?
+        fetchSalesmanError: false, // Salesman fetch Error?
+        fetchSalesmanSuccess:false, //salesman fetch is success?
+        salesmanList: null, // List of salesman 
+        currentSalesman:null, // currently choosed salesman id
         showModal:true // this is to check whether salesman select option modal to be shown or not
     }, action) => {
     switch (action.type) {
@@ -23,7 +21,8 @@ export default (
             return {
                 ...state,
                 isFetchingSalesman: true,
-                fetchSalesmanError: false
+                fetchSalesmanError: false,
+                fetchSalesmanSuccess:false
             };
 
 
@@ -31,7 +30,9 @@ export default (
             return {
                 ...state,
                 isFetchingSalesman: false,
-                salesmanList:action.salesmanList
+                fetchSalesmanError:false,
+                fetchSalesmanSuccess:true,
+                salesmanList:action.salespersonList
             };
 
 
@@ -39,6 +40,7 @@ export default (
             return {
                 ...state,
                 isFetchingSalesman: false,
+                fetchSalesmanSuccess:false,
                 fetchSalesmanError: true
             };
 

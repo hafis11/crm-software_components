@@ -5,7 +5,6 @@ import SalesDashboard from '../../Screen/DashBoard/salesDashboard/salesDashboard
 import Lead from '../../Screen/lead&Invoice/Lead';
 import Product from '../../Screen/Product/Product';
 import Report from '../../Screen/Report/report';
-import Topbar from '../../component/TopBar/TopBar'
 // import {withRouter} from 'react-router-dom';
 
 const axios = require("axios").default;
@@ -44,7 +43,6 @@ class Sales extends React.Component{
             </ul>
         </div>  
           <div>
-            <Topbar></Topbar>
             <Switch>
               <Route exact path={`${this.props.match.path}/`} component={SalesDashboard} />
               <Route path={`${this.props.match.path}/lead`} component={Lead}/>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TopBar from '../../component/TopBar/TopBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import {Link,withRouter} from 'react-router-dom';
@@ -44,6 +45,7 @@ class SalesTable extends Component {
     render() {
         return (
             <div class="bg-light" style={{ width: '94vw' }}>
+                <TopBar></TopBar>
                 <div class="head d-flex flex-row justify-content-between align-items-center">
                     <div class="head-text pl-5">Lead & Invoice</div>
                     {/* <LeadAdder></LeadAdder> */}

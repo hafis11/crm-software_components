@@ -1,7 +1,3 @@
-.dashboard-tab{
-    height: 89vh;
-    overflow-y: scroll;
-}
 .condent1{
     background-color: white;
 }
@@ -13,6 +9,7 @@
 }
 
 .activity-tab{
+    
     height: 70vh;
     font-size: 1.5vw;
 }
@@ -60,4 +57,14 @@
 .input-bar{
     width: 8vw;
     font-size: 1vw;
+}
+.alert-head-activity{
+    font-size: 1.5vw;
+}
+.items-action:hover{
+    color: white;
+}
+.activity-list-tab{
+    overflow-y: scroll;
+    height: 62vh;
 }
