@@ -1,9 +1,14 @@
 import React from 'react'
+import $ from 'jquery';
+import 'popper.js';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
 import '../salesDashboard/salesDashboard.css'
 import TopBar from '../../../component/TopBar/TopBar'
 
 class SalesDashboard extends React.Component{
-    
+
+
     render(){
         return(
             <div className="bg-light" style={{height:'100vh',width:'94vw'}}>
@@ -105,36 +110,27 @@ class SalesDashboard extends React.Component{
                             {/* border-head-close */}
                             {/* activity-tab */}
                             <div class="activity-list-tab">
-                            <span className="dropdown-item items-action d-flex justify-content-around align-items-center bg-primary rounded mt-1 shadow">
+                            <span className=" items-action d-flex align-items-center bg-light rounded mt-1 shadow">
                             <div>
-                                <div className="icon-circle bg-success rounded-circle d-flex align-items-center justify-content-center">
-                                <i className="fa fa-eercast "></i>
+                                <div >
+                                    <img className="activity-tab-icon rounded-circle ml-3" src="https://p16.muscdn.com/img/musically-maliva-obj/1637841601569797~c5_1080x1080.jpeg"></img>
                                 </div>
                             </div>
-                            <div>
-                                <div className="small text-gray-500">December 12, 2020</div>
-                                <span className="alert-head-activity font-weight-bold">OutBound E mail</span>
+                            <div class="d-flex justify-content-start flex-column container-fluid ml-3">
+                                <div className="font-weight-bold">OutBound Call</div>
+                                <span className="alert-head-activity text-primary font-weight-bold">sabu Abc</span>
                             </div>
-                            <div>
-                                <snap>12:30</snap>
-                            </div>
-                            </span>
-                            {/* ************************************************************** */}
-                            <span className="dropdown-item items-action d-flex justify-content-around align-items-center bg-primary rounded mt-1 shadow">
-                            <div>
-                                <div className="icon-circle bg-success rounded-circle d-flex align-items-center justify-content-center">
-                                <i className="fa fa-eercast "></i>
-                                </div>
-                            </div>
-                            <div>
-                                <div className="small text-gray-500">December 12, 2020</div>
-                                <span className="alert-head-activity font-weight-bold">OutBound Call</span>
-                            </div>
-                            <div>
-                                <snap>12:30</snap>
+                            <div class="d-flex justify-content-center container-fluid">
+                                <snap type="button" class="activity-button btn btn-primary rounded-pill p-2 text-light d-flex justify-content-center align-items-center">
+                                    <small class="font-weight-bold">Done</small><i className="fa fa-check ml-2"/>
+                                </snap>
+                                <span class="activity-button p-2 text-light d-flex justify-content-center align-items-center ml-n3">
+                                    <small class="font-weight-bold ml-2">12:00</small>
+                                </span>
                             </div>
                             </span>
                             {/* activity-tab-closed */}
+                            
                             </div>
                         </div>
                     </div>

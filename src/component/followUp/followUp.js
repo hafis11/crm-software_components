@@ -5,7 +5,6 @@ import EmailScheduleCard from './emailScheduleCard/emailScheduleCard'
 import CallTask from './callTask/callTask'
 import EmailTask from './emailTask/emailTask'
 import CallHistory from './callHistory/callHistory'
-import EnailHistory from './emailHistory/emailHistory'
 
 
 export default class FollowUp extends React.Component{
@@ -33,7 +32,6 @@ export default class FollowUp extends React.Component{
                         <span class="text-primary font-weight-bold">History</span>
                     </div>
                     <CallHistory></CallHistory>
-                    <EnailHistory></EnailHistory>
                 </div>
             </div>
         )

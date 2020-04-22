@@ -15,7 +15,7 @@ class NewLead extends React.Component {
         this.state = {
             leadDetails: null,
             assignedSalesman: null,
-            assignedSalesmanName:null,
+            assignedSalesmanName: null,
             newRemarks: null,
             salesList: null
         }
@@ -41,11 +41,11 @@ class NewLead extends React.Component {
         if (e.target.value == "-1") {
             this.setState({ assignedSalesman: null });
         } else {
-            $("#myModal").modal({backdrop:"static",show:true}) && this.setState({ assignedSalesman: e.target.value,assignedSalesmanName:e.target.options[e.target.selectedIndex].text });
+            $("#myModal").modal({ backdrop: "static", show: true }) && this.setState({ assignedSalesman: e.target.value, assignedSalesmanName: e.target.options[e.target.selectedIndex].text });
         }
     }
 
-    assign(){
+    assign() {
         let lead = this.state.leadDetails[0];
         let assignedId = this.state.assignedSalesman;
         lead.assignedTo = assignedId;
@@ -53,19 +53,19 @@ class NewLead extends React.Component {
         let newDate = moment(date).format("YYYY-MM-DD hh:mm:ss");
         lead.createdDate = newDate;
         console.log(lead);
-        axios.put(`http://localhost:3001/sales/${this.props.idsales}/leads/${this.props.idleads}`,{...lead},{withCredentials:true}).then(response=>{
-            if(response.status===202){
+        axios.put(`http://localhost:3001/sales/${this.props.idsales}/leads/${this.props.idleads}`, { ...lead }, { withCredentials: true }).then(response => {
+            if (response.status === 202) {
                 $("#myModal").modal("dispose");
                 alert("Successfuly Assigned the lead to new salesperson");
-            }else{
+            } else {
                 alert("Failed to assign salesperson");
             }
-        }).catch(response=>{
+        }).catch(response => {
             alert("Failed to assign salesperson")
         })
     }
 
-    addRemarks(){
+    addRemarks() {
         let lead = this.state.leadDetails[0];
         let assignedId = this.state.assignedSalesman;
         lead.assignedTo = assignedId;
@@ -74,14 +74,14 @@ class NewLead extends React.Component {
         lead.createdDate = newDate;
         lead.remarks = this.state.newRemarks
         console.log(lead);
-        axios.put(`http://localhost:3001/sales/${this.props.idsales}/leads/${this.props.idleads}`,{...lead},{withCredentials:true}).then(response=>{
-            if(response.status===202){
+        axios.put(`http://localhost:3001/sales/${this.props.idsales}/leads/${this.props.idleads}`, { ...lead }, { withCredentials: true }).then(response => {
+            if (response.status === 202) {
                 alert("Successfuly Updated The Remarks");
-                this.setState({newRemarks:null})
-            }else{
+                this.setState({ newRemarks: null })
+            } else {
                 alert("Failed to update remarks");
             }
-        }).catch(response=>{
+        }).catch(response => {
             alert("Failed to update remarks")
         })
     }
@@ -107,7 +107,25 @@ class NewLead extends React.Component {
 
     render() {
         return (
-            <div className="newlead-condainer mt-1 d-flex flex-column justify-content-around ">
+            <div className="newlead-condainer mt-1 d-flex flex-column justify-content-around ">                
+            {/* --------------------------MODAL------------------------------------------ */}
+                <div className="modal" id="myModal" tabIndex="-1" role="dialog">
+                    <div className="modal-dialog modal-dialog-centered" role="document">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title">Confirm Assiginment of Salesman</h5>
+                            </div>
+                            <div className="modal-body">
+                                <p className="text-capitalize">Please press confirm to assign this lead to {`${this.state.assignedSalesmanName}`} </p>
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-primary" data-dismiss="modal" onClick={this.assign}>Confirm</button>
+                                <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={() => { $("#myModal").modal("dispose") && this.setState({ assignedSalesman: null, assignedSalesmanName: null }) }} >Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* --------------------------MODAL------------------------------------------ */}
                 {/* section1 */}
                 <div className="d-flex flex-row justify-content-around">
                     <div className="newload-box pl-0 pr-0 col-3 rounded shadow">
@@ -132,7 +150,7 @@ class NewLead extends React.Component {
                         </div>
                     </div>
                     <div className="newload-box pl-0 pr-0 col-3 rounded shadow">
-                    <div className="d-flex justify-content-end mt-n4 mr-n1">
+                        <div className="d-flex justify-content-end mt-n4 mr-n1">
                             <span className="fa fa-caret-left glyphicon" style={{ color: '#99e9ff' }}></span>
                         </div>
                         <div className="name-condainer d-flex justify-content-around align-items-center flex-column">
@@ -156,7 +174,7 @@ class NewLead extends React.Component {
                         </div>
                     </div>
                     <div className="newload-box pl-0 pr-0 col-3 rounded shadow">
-                    <div className="d-flex justify-content-end mt-n4 mr-n1">
+                        <div className="d-flex justify-content-end mt-n4 mr-n1">
                             <span className="fa fa-caret-left glyphicon" style={{ color: '#c897fe' }}></span>
                         </div>
                         <div className="name-condainer d-flex flex-column justify-content-around align-items-center  ">
@@ -173,7 +191,7 @@ class NewLead extends React.Component {
                 {/* section2 */}
                 <div className="d-flex flex-row justify-content-around">
                     <div className="newload-box pl-0 pr-0 col-3 rounded shadow">
-                    <div className="d-flex justify-content-end mt-n4 mr-n1">
+                        <div className="d-flex justify-content-end mt-n4 mr-n1">
                             <span className="fa fa-caret-left glyphicon" style={{ color: '#fb999a' }}></span>
                         </div>
                         <div className="name-condainer d-flex justify-content-around align-items-center flex-column">
@@ -201,7 +219,7 @@ class NewLead extends React.Component {
                         </div>
                     </div>
                     <div className="newload-box pl-0 pr-0 col-3 rounded shadow">
-                    <div className="d-flex justify-content-end mt-n4 mr-n1">
+                        <div className="d-flex justify-content-end mt-n4 mr-n1">
                             <span className="fa fa-caret-left glyphicon" style={{ color: '#fef498' }}></span>
                         </div>
                         <div className="name-condainer d-flex flex-column justify-content-center align-items-center">
@@ -212,13 +230,13 @@ class NewLead extends React.Component {
                                 <snap className="lead-remark text-justify">{this.props.lead !== null ? `${this.props.lead[0].remarks}` : "Loading"}</snap>
                             </div>
                             <div>
-                                <textarea className="lead-textarea border-0 text-dark" placeholder="Remarks" onInput={(e)=>{this.setState({newRemarks:e.target.value})}}></textarea>
+                                <textarea className="lead-textarea border-0 text-dark" placeholder="Remarks" onInput={(e) => { this.setState({ newRemarks: e.target.value }) }}></textarea>
                             </div>
                             <div type="button" className="add-button rounded bg-primary p-2 d-flex align-items-center justify-content-center text-white" onClick={this.addRemarks}><snap>Add</snap></div>
                         </div>
                     </div>
                     <div className="newload-box pl-0 pr-0 col-3 rounded shadow">
-                    <div className="d-flex justify-content-end mt-n4 mr-n1">
+                        <div className="d-flex justify-content-end mt-n4 mr-n1">
                             <span className="fa fa-caret-left glyphicon" style={{ color: '#fec4a7' }}></span>
                         </div>
                         <div className="name-condainer d-flex flex-column justify-content-around align-items-center">

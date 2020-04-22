@@ -56,6 +56,7 @@ class TopBar extends React.Component{
                 <img className="img-profile rounded-circle ml-2" src="https://p16.muscdn.com/img/musically-maliva-obj/1637841601569797~c5_1080x1080.jpeg"></img>
             </div>
             <div className="dropdown-menu dropdown-menu-right shadow" aria-labelledby="dropdownMenuButton">
+                <a className="dropdown-item" onClick={this.props.ProfleView} >Profile</a>
                 <a className="dropdown-item" onClick={this.logout} >Logout</a>
             </div>
           </div>    

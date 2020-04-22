@@ -21,3 +21,21 @@
     color: grey;
     font-size: .8vw;
 }
+.stepper-bar1{
+    color: white;
+    padding: 12px;
+    width: 18vw;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+.stepper-bar2{
+    color: white;
+    padding: 12px;
+    width: 18vw;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    background-color: blue;
+    border-radius:50px
+}

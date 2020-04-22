@@ -23,9 +23,10 @@ class Lead extends React.Component {
         this.state = {
             list: [],
             showLeadsAndInvoice: true,
-            idleads:null
+            idleads:null,
         }
         this.showLeads = this.showLeads.bind(this);
+
     }
 
     componentDidMount() {
@@ -75,17 +76,6 @@ class Lead extends React.Component {
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
-                            {/* <tbody>
-                            <tr>
-                                <td>Stella</td>
-                                <td>Dubai</td>
-                                <td>Crane</td>
-                                <td>23 May 2019</td>
-                                <td>NewLead</td>
-                                <td class="fa fa-eye text-success"onClick = {()=>this.onClickHandler()}></td>
-                            </tr>
-                        </tbody> */}
-                            {/* <Leadlist></Leadlist> */}
                             {this.state.list}
 
                         </table>
@@ -97,11 +87,11 @@ class Lead extends React.Component {
             return (
                 <div className="container-fluid p-0 d-flex" style={{ overflow: "hidden", flexDirection: "column", backgroundColor: '#f7f7f7' }}>
                     <Router history={this.props.history}>
-                        <div className="d-flex mx-auto my-3 bg-primary text-white rounded-pill" style={{ height: "5%" }}>
-                            <NavLink to={{pathname:`${this.state.match.url}/`,state:{idsales:this.props.location.state.idsales,idleads:this.props.idleads}}} activeClassName="activeLead" className="stepper-bar bg-danger d-flex justify-content-center"><span>New Lead</span></NavLink>
-                            <NavLink to={{pathname:`${this.state.match.url}/followUp`,state:{idsales:this.props.location.state.idsales,idleads:this.state.idleads}}} activeClassName="activeLead" className="stepper-bar  bg-success d-flex justify-content-center"><span>Follow_Up</span></NavLink>
-                            <NavLink to={{pathname:`${this.state.match.url}/estimate`,state:{idsales:this.props.location.state.idsales,idleads:this.state.idleads}}} activeClassName="activeLead" className="stepper-bar bg-warning d-flex justify-content-center"><span>Estimate</span></NavLink>
-                            <NavLink to={{pathname:`${this.state.match.url}/invoice`,state:{idsales:this.props.location.state.idsales,idleads:this.state.idleads}}} activeClassName="activeLead" className="stepper-bar bg-secondary d-flex justify-content-center"><span>Invoice</span></NavLink>
+                        <div className="d-flex mx-auto my-3 bg-warning text-white rounded-pill" style={{ height: "5%" }}>
+                            <NavLink to={{pathname:`${this.state.match.url}/`,state:{idsales:this.props.location.state.idsales,idleads:this.props.idleads}}} activeClassName="activeLead" className="stepper-bar1 d-flex justify-content-center"><span>New Lead</span></NavLink>
+                            <NavLink to={{pathname:`${this.state.match.url}/followUp`,state:{idsales:this.props.location.state.idsales,idleads:this.state.idleads}}} activeClassName="activeLead" className="stepper-bar1 d-flex justify-content-center"><span>Follow_Up</span></NavLink>
+                            <NavLink to={{pathname:`${this.state.match.url}/estimate`,state:{idsales:this.props.location.state.idsales,idleads:this.state.idleads}}} activeClassName="activeLead" className="stepper-bar1 d-flex justify-content-center"><span>Estimate</span></NavLink>
+                            <NavLink to={{pathname:`${this.state.match.url}/invoice`,state:{idsales:this.props.location.state.idsales,idleads:this.state.idleads}}} activeClassName="activeLead" className="stepper-bar1 d-flex justify-content-center"><span>Invoice</span></NavLink>
                         </div>
                         <Switch>
                             <Route exact path={`${this.state.match.path}/`} component={NewLead} />

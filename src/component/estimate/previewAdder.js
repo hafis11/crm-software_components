@@ -9,8 +9,9 @@ export default class PreviewAdder extends Component {
             <tr>
                 <td>{this.props.product}</td>
                 <td>{this.props.units}</td>
-                <td>Null</td>
-                <td>{this.props.gTotal}</td>
+                <td>{this.props.price}</td>
+                <td>{Number(this.props.units) * Number(this.props.price)}</td>
+
             </tr>
         )
     }

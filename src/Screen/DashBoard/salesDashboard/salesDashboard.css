@@ -59,12 +59,28 @@
     font-size: 1vw;
 }
 .alert-head-activity{
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
-.items-action:hover{
-    color: white;
+.items-action{
+    height: 15vh;
 }
 .activity-list-tab{
     overflow-y: scroll;
     height: 62vh;
+}
+.activity-tab-icon{
+    width: 4vw;
+}
+.activity-button{
+    font-size: 1vw;
+    width: 5vw;
+}
+.activity-button:first-child{
+    z-index: 100;
+}
+.activity-button:last-child{
+    background-color: #7bb6f5;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
 }
